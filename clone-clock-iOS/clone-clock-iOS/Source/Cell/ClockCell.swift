@@ -9,7 +9,7 @@ import UIKit
 
 class ClockCell: UITableViewCell {
     static let identifier = "ClockCell"
-
+    
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var meridiemLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
@@ -19,13 +19,17 @@ class ClockCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
-
+    
+    override func willTransition(to state: UITableViewCell.StateMask) {
+//        timeLabel.isHidden = true
+//        meridiemLabel.isHidden = true
+    }
 }
 
 extension ClockCell {
@@ -35,6 +39,6 @@ extension ClockCell {
         cityLabel.text = clock.city
         diffLabel.text = clock.diff
         
-        cityLabel.sizeToFit()
+        self.backgroundColor = .black
     }
 }

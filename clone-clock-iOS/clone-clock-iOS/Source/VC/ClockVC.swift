@@ -16,10 +16,20 @@ class ClockVC: UIViewController {
         super.viewDidLoad()
         setView()
         
-        clockList.append(contentsOf: [ClockData(time: "7:33", city: "서울", diff: "오늘, +0시간", meridiem: "오후"), ClockData(time: "5:30", city: "갈라파고스 제도", diff: "오늘, -15시간", meridiem: "오전"),ClockData(time: "7:33", city: "서울", diff: "오늘, +0시간", meridiem: "오후"),ClockData(time: "7:33", city: "서울", diff: "오늘, +0시간", meridiem: "오후"),])
+        clockList.append(contentsOf: [ClockData(time: "7:33", city: "서울", diff: "오늘, +0시간", meridiem: "오후"), ClockData(time: "5:30", city: "갈라파고스 제도", diff: "오늘, -15시간", meridiem: "오전"),ClockData(time: "7:33", city: "데이비스 기지", diff: "오늘, +0시간", meridiem: "오후"),ClockData(time: "7:33", city: "서울", diff: "오늘, +0시간", meridiem: "오후")])
         
         clockTableView.dataSource = self
         clockTableView.delegate = self
+    }
+    
+    override func setEditing(_ editing: Bool, animated: Bool) {
+        if(editing && !clockTableView.isEditing){
+            clockTableView.setEditing(true, animated: true)
+            editButtonItem.title = "편집"
+         }else{
+            clockTableView.setEditing(false, animated: true)
+            editButtonItem.title = "완료"
+         }
     }
 }
 
@@ -28,21 +38,18 @@ extension ClockVC {
         clockTableView.backgroundColor = .black
         view.backgroundColor = .black
         
-        // navigation item
-        let editButton = UIBarButtonItem(title: "편집", style: .plain, target: self, action: nil)
-        editButton.tintColor = .systemOrange
-        editButton.setTitleTextAttributes([.font: UIFont.boldSystemFont(ofSize: 16)], for: .normal)
-        
         let plusButton = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: nil)
         plusButton.tintColor = .systemOrange
         
-        navigationItem.leftBarButtonItem = editButton
+        // 내장 editButton이 있었다
+        navigationItem.leftBarButtonItem = editButtonItem
+        editButtonItem.tintColor = .systemOrange
         navigationItem.rightBarButtonItem = plusButton
         
         // navigation bar
         self.navigationController?.navigationBar.setItems([navigationItem], animated: true)
         self.navigationController?.navigationBar.topItem?.title = .none
-        self.navigationController?.navigationBar.barTintColor = .black
+        self.navigationController?.navigationBar.tintColor = .black
         self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor : UIColor.white]
         
         // largeTitle (세계 시계)
@@ -117,5 +124,9 @@ extension ClockVC: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
         return "삭제"
+    }
+        
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        
     }
 }

@@ -12,4 +12,7 @@ struct ClockData {
     var city: String
     var diff: String
     var meridiem: String
+    
+//    var hour: Int
+//    var min: Int
 }
