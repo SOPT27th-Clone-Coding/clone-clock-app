@@ -17,7 +17,7 @@ class tabBarController: UITabBarController {
 
 extension tabBarController {
     func setTabBar() {
-        guard let clockVC = UIStoryboard(name: "Clock", bundle: nil).instantiateViewController(identifier: "ClockVC") as? ClockVC,
+        guard let clockVC = UIStoryboard(name: "Clock", bundle: nil).instantiateViewController(withIdentifier: "ClockNVC") as? UINavigationController,
               let alarmVC = UIStoryboard(name: "Alarm", bundle: nil).instantiateViewController(identifier: "AlarmVC") as? AlarmVC,
               let stopWatchVC = UIStoryboard(name: "StopWatch", bundle: nil).instantiateViewController(identifier: "StopWatchVC") as? StopWatchVC,
               let TimerVC = UIStoryboard(name: "Timer", bundle: nil).instantiateViewController(identifier: "TimerVC") as? TimerVC else {
