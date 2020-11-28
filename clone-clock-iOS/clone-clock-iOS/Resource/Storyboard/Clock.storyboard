@@ -68,6 +68,12 @@
                                                 <constraint firstItem="cr3-kE-ZHz" firstAttribute="bottom" secondItem="2gO-bO-5Uv" secondAttribute="bottom" id="mEb-li-qgv"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cityLabel" destination="2gO-bO-5Uv" id="ev2-lT-R46"/>
+                                            <outlet property="diffLabel" destination="nB3-KR-wx3" id="ZSy-wV-mNZ"/>
+                                            <outlet property="meridiemLabel" destination="cr3-kE-ZHz" id="bdG-Xk-Yls"/>
+                                            <outlet property="timeLabel" destination="tUp-ad-8XN" id="YZD-RJ-r1n"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

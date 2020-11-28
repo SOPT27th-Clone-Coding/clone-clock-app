@@ -10,6 +10,11 @@ import UIKit
 class ClockCell: UITableViewCell {
     static let identifier = "ClockCell"
 
+    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var meridiemLabel: UILabel!
+    @IBOutlet weak var cityLabel: UILabel!
+    @IBOutlet weak var diffLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -24,21 +29,12 @@ class ClockCell: UITableViewCell {
 }
 
 extension ClockCell {
-    func setCell() {
-
-    }
-    
-    func setHeader() {
-        let headerLabel = UILabel()
-        headerLabel.isHidden = false
-        headerLabel.text = "세계 시계"
-        headerLabel.textColor = .white
-        headerLabel.font = .boldSystemFont(ofSize: 35)
-
+    func setCell(clock: ClockData) {
+        timeLabel.text = clock.time
+        meridiemLabel.text = clock.meridiem
+        cityLabel.text = clock.city
+        diffLabel.text = clock.diff
         
-        headerLabel.translatesAutoresizingMaskIntoConstraints = false
-        self.contentView.addSubview(headerLabel)
-
-        headerLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20).isActive = true
+        cityLabel.sizeToFit()
     }
 }

@@ -10,11 +10,13 @@ import UIKit
 class ClockVC: UIViewController {
     @IBOutlet weak var clockTableView: UITableView!
     
+    var clockList : [ClockData] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setView()
         
-
+        clockList.append(contentsOf: [ClockData(time: "7:33", city: "서울", diff: "오늘, +0시간", meridiem: "오후"), ClockData(time: "5:30", city: "갈라파고스 제도", diff: "오늘, -15시간", meridiem: "오전"),ClockData(time: "7:33", city: "서울", diff: "오늘, +0시간", meridiem: "오후"),ClockData(time: "7:33", city: "서울", diff: "오늘, +0시간", meridiem: "오후"),])
         
         clockTableView.dataSource = self
         clockTableView.delegate = self
@@ -84,12 +86,13 @@ extension ClockVC {
 
 extension ClockVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return clockList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ClockCell") as? ClockCell else {return UITableViewCell()}
         
+        cell.setCell(clock: clockList[indexPath.row])
         return cell
     }
     
@@ -101,5 +104,18 @@ extension ClockVC: UITableViewDataSource {
 extension ClockVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         clockTableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    // 테이블 셀 슬라이드 삭제
+    // cell의 개수가 clockList.count이기 때문에 clockList 요소도 함께 삭제해줘야함
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == .delete) {
+            clockList.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .left) // .left랑 .fade 차이가 뭐죠
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
+        return "삭제"
     }
 }

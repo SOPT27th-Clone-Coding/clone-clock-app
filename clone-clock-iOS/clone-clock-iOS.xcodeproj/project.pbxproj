@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		ABA4627D257013610081DD0B /* ClockCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA4627C257013610081DD0B /* ClockCell.swift */; };
+		ABA4628125726A2E0081DD0B /* ClockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA4628025726A2E0081DD0B /* ClockModel.swift */; };
 		ABFE491F256D57DA0052F538 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFE491E256D57DA0052F538 /* AppDelegate.swift */; };
 		ABFE4921256D57DA0052F538 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFE4920256D57DA0052F538 /* SceneDelegate.swift */; };
 		ABFE4928256D57DC0052F538 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABFE4927256D57DC0052F538 /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		ABA4627C257013610081DD0B /* ClockCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockCell.swift; sourceTree = "<group>"; };
+		ABA4628025726A2E0081DD0B /* ClockModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockModel.swift; sourceTree = "<group>"; };
 		ABFE491B256D57DA0052F538 /* clone-clock-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "clone-clock-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABFE491E256D57DA0052F538 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABFE4920256D57DA0052F538 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +57,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ABA4627F25726A180081DD0B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ABA4628025726A2E0081DD0B /* ClockModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		ABFE4912256D57DA0052F538 = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +106,7 @@
 		ABFE4934256D59B70052F538 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				ABA4627F25726A180081DD0B /* Model */,
 				ABFE4938256D59E80052F538 /* Cell */,
 				ABFE4937256D59E20052F538 /* VC */,
 			);
@@ -209,6 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABFE4956256D6B260052F538 /* TimerVC.swift in Sources */,
+				ABA4628125726A2E0081DD0B /* ClockModel.swift in Sources */,
 				ABFE4953256D6B1B0052F538 /* StopWatchVC.swift in Sources */,
 				ABFE491F256D57DA0052F538 /* AppDelegate.swift in Sources */,
 				ABFE4944256D5CBC0052F538 /* ClockVC.swift in Sources */,
