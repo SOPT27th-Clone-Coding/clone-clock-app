@@ -25,10 +25,10 @@ class ClockVC: UIViewController {
     override func setEditing(_ editing: Bool, animated: Bool) {
         if(editing && !clockTableView.isEditing){
             clockTableView.setEditing(true, animated: true)
-            editButtonItem.title = "편집"
+            editButtonItem.title = "완료"
          }else{
             clockTableView.setEditing(false, animated: true)
-            editButtonItem.title = "완료"
+            editButtonItem.title = "편집"
          }
     }
 }
@@ -44,6 +44,7 @@ extension ClockVC {
         // 내장 editButton이 있었다
         navigationItem.leftBarButtonItem = editButtonItem
         editButtonItem.tintColor = .systemOrange
+        editButtonItem.title = "편집"
         navigationItem.rightBarButtonItem = plusButton
         
         // navigation bar

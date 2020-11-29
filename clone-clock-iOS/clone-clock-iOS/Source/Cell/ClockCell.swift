@@ -26,10 +26,22 @@ class ClockCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    // ... cityLabel이 작아지지 않으면서 사라지는 방법을 찾아야함
     override func willTransition(to state: UITableViewCell.StateMask) {
-//        timeLabel.isHidden = true
-//        meridiemLabel.isHidden = true
+        if (state.contains(.showingEditControl)) {
+            timeLabel.isHidden = true
+            meridiemLabel.isHidden = true
+            
+        }
     }
+    
+    override func didTransition(to state: UITableViewCell.StateMask) {
+        if (state == StateMask.init(rawValue: 0)) {
+            timeLabel.isHidden = false
+            meridiemLabel.isHidden = false
+        }
+    }
+    
 }
 
 extension ClockCell {
@@ -37,6 +49,7 @@ extension ClockCell {
         timeLabel.text = clock.time
         meridiemLabel.text = clock.meridiem
         cityLabel.text = clock.city
+        cityLabel.preferredMaxLayoutWidth = 190
         diffLabel.text = clock.diff
         
         self.backgroundColor = .black
