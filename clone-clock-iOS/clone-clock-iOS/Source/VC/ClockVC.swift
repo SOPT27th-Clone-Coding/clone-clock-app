@@ -100,6 +100,7 @@ extension ClockVC: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ClockCell") as? ClockCell else {return UITableViewCell()}
         
         cell.setCell(clock: clockList[indexPath.row])
+        cell.overrideUserInterfaceStyle = .dark
         return cell
     }
     
