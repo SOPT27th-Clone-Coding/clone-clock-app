@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB74293A2573E4F000A7317D /* AddCityVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7429392573E4F000A7317D /* AddCityVC.swift */; };
 		ABA4627D257013610081DD0B /* ClockCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA4627C257013610081DD0B /* ClockCell.swift */; };
 		ABA4628125726A2E0081DD0B /* ClockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA4628025726A2E0081DD0B /* ClockModel.swift */; };
 		ABFE491F256D57DA0052F538 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFE491E256D57DA0052F538 /* AppDelegate.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AB7429392573E4F000A7317D /* AddCityVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCityVC.swift; sourceTree = "<group>"; };
 		ABA4627C257013610081DD0B /* ClockCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockCell.swift; sourceTree = "<group>"; };
 		ABA4628025726A2E0081DD0B /* ClockModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockModel.swift; sourceTree = "<group>"; };
 		ABFE491B256D57DA0052F538 /* clone-clock-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "clone-clock-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -133,6 +135,7 @@
 				ABFE494F256D6B0D0052F538 /* AlarmVC.swift */,
 				ABFE4952256D6B1B0052F538 /* StopWatchVC.swift */,
 				ABFE4955256D6B260052F538 /* TimerVC.swift */,
+				AB7429392573E4F000A7317D /* AddCityVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 				ABFE4953256D6B1B0052F538 /* StopWatchVC.swift in Sources */,
 				ABFE491F256D57DA0052F538 /* AppDelegate.swift in Sources */,
 				ABFE4944256D5CBC0052F538 /* ClockVC.swift in Sources */,
+				AB74293A2573E4F000A7317D /* AddCityVC.swift in Sources */,
 				ABFE493A256D5BD50052F538 /* tabBarController.swift in Sources */,
 				ABFE4950256D6B0D0052F538 /* AlarmVC.swift in Sources */,
 				ABA4627D257013610081DD0B /* ClockCell.swift in Sources */,

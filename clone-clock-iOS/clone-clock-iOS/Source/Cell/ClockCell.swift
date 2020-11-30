@@ -31,7 +31,6 @@ class ClockCell: UITableViewCell {
         if (state.contains(.showingEditControl)) {
             timeLabel.isHidden = true
             meridiemLabel.isHidden = true
-            
         }
     }
     

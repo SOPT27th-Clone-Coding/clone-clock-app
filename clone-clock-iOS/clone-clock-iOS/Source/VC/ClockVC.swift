@@ -26,10 +26,10 @@ class ClockVC: UIViewController {
         if(editing && !clockTableView.isEditing){
             clockTableView.setEditing(true, animated: true)
             editButtonItem.title = "완료"
-         }else{
+        }else{
             clockTableView.setEditing(false, animated: true)
             editButtonItem.title = "편집"
-         }
+        }
     }
 }
 
@@ -40,6 +40,7 @@ extension ClockVC {
         
         let plusButton = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: nil)
         plusButton.tintColor = .systemOrange
+        plusButton.action = #selector(touchUpPlus(_:))
         
         // 내장 editButton이 있었다
         navigationItem.leftBarButtonItem = editButtonItem
@@ -90,6 +91,12 @@ extension ClockVC {
         footer.backgroundColor = .clear
         clockTableView.tableFooterView = footer
     }
+    
+    @IBAction func touchUpPlus(_ sender: UIButton) {
+        guard let addVC = self.storyboard?.instantiateViewController(withIdentifier: "AddCityVC") as? AddCityVC else {return}
+        
+        self.present(addVC, animated: true, completion: nil)
+    }
 }
 
 extension ClockVC: UITableViewDataSource {
@@ -127,7 +134,7 @@ extension ClockVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
         return "삭제"
     }
-        
+    
     func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
         
     }
