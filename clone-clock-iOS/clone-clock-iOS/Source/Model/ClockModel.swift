@@ -12,6 +12,7 @@ struct ClockData {
     var city: String
     var diff: String
     var meridiem: String
+    var section: String?
     
 //    var hour: Int
 //    var min: Int

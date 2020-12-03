@@ -105,8 +105,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <searchBar contentMode="redraw" text="" translatesAutoresizingMaskIntoConstraints="NO" id="kEU-xJ-aWe">
+                                <rect key="frame" x="0.0" y="44" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="R1b-Or-WlN">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="100" width="414" height="796"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="114" id="fDG-mc-MqJ">
@@ -124,13 +128,17 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="taY-Vf-isN" firstAttribute="trailing" secondItem="R1b-Or-WlN" secondAttribute="trailing" id="8Zm-oo-ne4"/>
+                            <constraint firstItem="R1b-Or-WlN" firstAttribute="top" secondItem="kEU-xJ-aWe" secondAttribute="bottom" id="9Su-iU-gSA"/>
                             <constraint firstItem="R1b-Or-WlN" firstAttribute="leading" secondItem="taY-Vf-isN" secondAttribute="leading" id="Fgp-pk-BAt"/>
-                            <constraint firstItem="R1b-Or-WlN" firstAttribute="top" secondItem="taY-Vf-isN" secondAttribute="top" id="RQn-f1-597"/>
-                            <constraint firstItem="taY-Vf-isN" firstAttribute="bottom" secondItem="R1b-Or-WlN" secondAttribute="bottom" id="cL2-Nf-g67"/>
+                            <constraint firstItem="kEU-xJ-aWe" firstAttribute="leading" secondItem="taY-Vf-isN" secondAttribute="leading" id="Ifb-Qw-jiD"/>
+                            <constraint firstItem="kEU-xJ-aWe" firstAttribute="top" secondItem="taY-Vf-isN" secondAttribute="top" id="QoN-Bs-fR0"/>
+                            <constraint firstAttribute="bottom" secondItem="R1b-Or-WlN" secondAttribute="bottom" id="cL2-Nf-g67"/>
+                            <constraint firstItem="kEU-xJ-aWe" firstAttribute="trailing" secondItem="taY-Vf-isN" secondAttribute="trailing" id="vSA-Qq-h1a"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="cityTableView" destination="R1b-Or-WlN" id="CVM-Xl-uIx"/>
+                        <outlet property="searchBar" destination="kEU-xJ-aWe" id="CMv-Gi-bTV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rqa-Oi-nSe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
