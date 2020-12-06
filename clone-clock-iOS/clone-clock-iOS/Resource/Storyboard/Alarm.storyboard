@@ -54,13 +54,79 @@
                                             <outlet property="changeButton" destination="UW7-4p-9Bf" id="TiJ-JP-dT9"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AlarmCell" rowHeight="157" id="Dsa-bF-DrL" customClass="AlarmCell" customModule="clone_clock_iOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="190" width="414" height="157"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AlarmCell" rowHeight="106" id="Dsa-bF-DrL" customClass="AlarmCell" customModule="clone_clock_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="190" width="414" height="106"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Dsa-bF-DrL" id="0hV-R8-a8l">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="157"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="106"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fIM-Iq-pLx">
+                                                    <rect key="frame" x="91" y="7" width="96" height="49"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="41"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="알람" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V0u-jX-dc1">
+                                                    <rect key="frame" x="20" y="56" width="24.5" height="40"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DOs-pc-uvg">
+                                                    <rect key="frame" x="345" y="37.5" width="51" height="31"/>
+                                                </switch>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FMy-wD-4XV">
+                                                    <rect key="frame" x="196.5" y="7" width="96" height="49"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="41"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="raE-Px-gl9">
+                                                    <rect key="frame" x="20" y="20" width="71" height="36"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="36" id="l2M-4A-bAT"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=":" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vlQ-q3-mTt">
+                                                    <rect key="frame" x="187" y="7" width="9.5" height="49"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="41"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="V0u-jX-dc1" firstAttribute="leading" secondItem="raE-Px-gl9" secondAttribute="leading" id="8hy-Tf-UpM"/>
+                                                <constraint firstItem="FMy-wD-4XV" firstAttribute="bottom" secondItem="vlQ-q3-mTt" secondAttribute="bottom" id="Ab5-1B-DiD"/>
+                                                <constraint firstItem="raE-Px-gl9" firstAttribute="top" secondItem="0hV-R8-a8l" secondAttribute="top" constant="20" id="R5D-DR-869"/>
+                                                <constraint firstItem="FMy-wD-4XV" firstAttribute="leading" secondItem="vlQ-q3-mTt" secondAttribute="trailing" id="UEr-YM-63k"/>
+                                                <constraint firstItem="fIM-Iq-pLx" firstAttribute="bottom" secondItem="raE-Px-gl9" secondAttribute="bottom" id="UeL-TK-nAG"/>
+                                                <constraint firstItem="raE-Px-gl9" firstAttribute="leading" secondItem="0hV-R8-a8l" secondAttribute="leading" constant="20" id="WNe-5V-yvp"/>
+                                                <constraint firstAttribute="bottom" secondItem="V0u-jX-dc1" secondAttribute="bottom" constant="10" id="Wj4-vJ-rOK"/>
+                                                <constraint firstItem="vlQ-q3-mTt" firstAttribute="leading" secondItem="fIM-Iq-pLx" secondAttribute="trailing" id="Xfl-1v-w0C"/>
+                                                <constraint firstItem="FMy-wD-4XV" firstAttribute="height" secondItem="vlQ-q3-mTt" secondAttribute="height" id="YFZ-6B-XNT"/>
+                                                <constraint firstItem="V0u-jX-dc1" firstAttribute="top" secondItem="raE-Px-gl9" secondAttribute="bottom" id="ZIL-8D-BRg"/>
+                                                <constraint firstItem="fIM-Iq-pLx" firstAttribute="leading" secondItem="raE-Px-gl9" secondAttribute="trailing" id="bIA-u1-kxL"/>
+                                                <constraint firstItem="vlQ-q3-mTt" firstAttribute="height" secondItem="fIM-Iq-pLx" secondAttribute="height" id="ejT-V7-zrF"/>
+                                                <constraint firstItem="vlQ-q3-mTt" firstAttribute="bottom" secondItem="fIM-Iq-pLx" secondAttribute="bottom" id="iuf-W7-azO"/>
+                                                <constraint firstAttribute="trailing" secondItem="DOs-pc-uvg" secondAttribute="trailing" constant="20" id="mPn-2d-e3e"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <constraints>
+                                            <constraint firstItem="DOs-pc-uvg" firstAttribute="centerY" secondItem="Dsa-bF-DrL" secondAttribute="centerY" id="3h7-Sw-8PX"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="alarmLabel" destination="V0u-jX-dc1" id="j20-dF-Mow"/>
+                                            <outlet property="colonLabel" destination="vlQ-q3-mTt" id="yN5-5M-rTa"/>
+                                            <outlet property="hourLabel" destination="fIM-Iq-pLx" id="p7b-LM-wyr"/>
+                                            <outlet property="meridiemLabel" destination="raE-Px-gl9" id="y2e-9O-n11"/>
+                                            <outlet property="minLabel" destination="FMy-wD-4XV" id="667-47-lie"/>
+                                            <outlet property="statusSwitch" destination="DOs-pc-uvg" id="AVr-EH-KxY"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

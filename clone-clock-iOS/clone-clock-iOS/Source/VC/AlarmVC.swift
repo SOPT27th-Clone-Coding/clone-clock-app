@@ -15,6 +15,7 @@ class AlarmVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setView()
+        setData()
         
         alarmTableView.dataSource = self
         alarmTableView.delegate = self
@@ -36,6 +37,7 @@ extension AlarmVC {
     func setView() {
         alarmTableView.backgroundColor = .black
         alarmTableView.separatorColor = .darkGray
+        alarmTableView.separatorStyle = .singleLine
         alarmTableView.tableFooterView = UILabel(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 0))
         alarmTableView.tableFooterView?.backgroundColor = .clear
         
@@ -64,7 +66,10 @@ extension AlarmVC {
             NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 35),
             NSAttributedString.Key.foregroundColor : UIColor.brown
         ]
-        
+    }
+    
+    func setData() {
+        alarmData.append(contentsOf: [AlarmModel(meridiem: "오전", hour: 3, min: 23, status: true),AlarmModel(meridiem: "오전", hour: 3, min: 23, status: false)])
     }
 }
 
@@ -72,12 +77,9 @@ extension AlarmVC : UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case 0:
-            return 2
-        case 1:
-            //            return alarmData.count
-            return 10
+            return 1
         default:
-            return 3
+            return alarmData.count
         }
     }
     
@@ -95,6 +97,7 @@ extension AlarmVC : UITableViewDataSource {
             return cell
         } else {
             guard let cell = alarmTableView.dequeueReusableCell(withIdentifier: "AlarmCell") as? AlarmCell else {return UITableViewCell()}
+            cell.setCell(alarm: alarmData[indexPath.row])
             
             return cell
         }
@@ -106,6 +109,23 @@ extension AlarmVC : UITableViewDataSource {
             return "수면 | 기상"
         default:
             return "기타"
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        view.tintColor = .black
+        
+        var header : UITableViewHeaderFooterView = view as! UITableViewHeaderFooterView
+        header.textLabel?.textColor = .white
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+
+        let sectionHeaderHeight = self.alarmTableView.sectionHeaderHeight;
+        if (scrollView.contentOffset.y <= sectionHeaderHeight && scrollView.contentOffset.y>=0) {
+            scrollView.contentInset = UIEdgeInsets(top: -scrollView.contentOffset.y, left: 0, bottom: 0, right: 0);
+        } else if (scrollView.contentOffset.y>=sectionHeaderHeight) {
+            scrollView.contentInset = UIEdgeInsets(top: -sectionHeaderHeight, left: 0, bottom: 0, right: 0);
         }
     }
 }

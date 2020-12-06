@@ -35,6 +35,8 @@ extension SleepCell {
         changeButton.setTitle("변경", for: .normal)
         changeButton.tintColor = .systemOrange
         changeButton.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.15).isActive = true
-        changeButton.layer.cornerRadius = changeButton.bounds.size.width * 0.3
+        
+        // (bug) sroll 하니까 좀 변함
+        changeButton.layer.cornerRadius = changeButton.frame.size.width * 0.3
     }
 }
