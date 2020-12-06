@@ -31,6 +31,11 @@ class ClockVC: UIViewController {
             editButtonItem.title = "편집"
         }
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        print(self)
+        print("나타납니다")
+    }
 }
 
 extension ClockVC {

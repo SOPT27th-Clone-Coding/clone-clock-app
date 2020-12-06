@@ -10,6 +10,9 @@
 		AB74293A2573E4F000A7317D /* AddCityVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7429392573E4F000A7317D /* AddCityVC.swift */; };
 		ABA4627D257013610081DD0B /* ClockCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA4627C257013610081DD0B /* ClockCell.swift */; };
 		ABA4628125726A2E0081DD0B /* ClockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA4628025726A2E0081DD0B /* ClockModel.swift */; };
+		ABE75DC5257BF0FA00245480 /* AlarmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE75DC4257BF0FA00245480 /* AlarmModel.swift */; };
+		ABE75DC8257BF16200245480 /* AlarmCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE75DC7257BF16200245480 /* AlarmCell.swift */; };
+		ABE75DCB257BF35400245480 /* SleepCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE75DCA257BF35400245480 /* SleepCell.swift */; };
 		ABFE491F256D57DA0052F538 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFE491E256D57DA0052F538 /* AppDelegate.swift */; };
 		ABFE4921256D57DA0052F538 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFE4920256D57DA0052F538 /* SceneDelegate.swift */; };
 		ABFE4928256D57DC0052F538 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABFE4927256D57DC0052F538 /* Assets.xcassets */; };
@@ -30,6 +33,9 @@
 		AB7429392573E4F000A7317D /* AddCityVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCityVC.swift; sourceTree = "<group>"; };
 		ABA4627C257013610081DD0B /* ClockCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockCell.swift; sourceTree = "<group>"; };
 		ABA4628025726A2E0081DD0B /* ClockModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockModel.swift; sourceTree = "<group>"; };
+		ABE75DC4257BF0FA00245480 /* AlarmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmModel.swift; sourceTree = "<group>"; };
+		ABE75DC7257BF16200245480 /* AlarmCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmCell.swift; sourceTree = "<group>"; };
+		ABE75DCA257BF35400245480 /* SleepCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepCell.swift; sourceTree = "<group>"; };
 		ABFE491B256D57DA0052F538 /* clone-clock-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "clone-clock-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABFE491E256D57DA0052F538 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABFE4920256D57DA0052F538 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				ABA4628025726A2E0081DD0B /* ClockModel.swift */,
+				ABE75DC4257BF0FA00245480 /* AlarmModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -144,6 +151,8 @@
 			isa = PBXGroup;
 			children = (
 				ABA4627C257013610081DD0B /* ClockCell.swift */,
+				ABE75DC7257BF16200245480 /* AlarmCell.swift */,
+				ABE75DCA257BF35400245480 /* SleepCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -232,6 +241,9 @@
 				ABFE4950256D6B0D0052F538 /* AlarmVC.swift in Sources */,
 				ABA4627D257013610081DD0B /* ClockCell.swift in Sources */,
 				ABFE4921256D57DA0052F538 /* SceneDelegate.swift in Sources */,
+				ABE75DC5257BF0FA00245480 /* AlarmModel.swift in Sources */,
+				ABE75DC8257BF16200245480 /* AlarmCell.swift in Sources */,
+				ABE75DCB257BF35400245480 /* SleepCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

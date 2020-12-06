@@ -24,6 +24,7 @@ class AddCityVC: UIViewController {
         setData()
         
         cityTableView.dataSource = self
+        cityTableView.delegate = self
     }
 }
 
@@ -119,5 +120,19 @@ extension AddCityVC: UITableViewDataSource {
     
     func sectionIndexTitles(for tableView: UITableView) -> [String]? {
         return clockSection
+    }
+}
+
+extension AddCityVC: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let value = clockIndex[clockSection[indexPath.section]]?[indexPath.row] else {return}
+        
+        guard let pvc = self.presentingViewController as? UITabBarController else {return}
+        pvc.selectedIndex = 0
+        
+        // 여기서 clockVC가 왜 안 나오나요...
+//        guard let clockVC = pvc.selectedViewController as? UINavigationController else {return}
+        
+        self.dismiss(animated: true, completion: nil)
     }
 }
