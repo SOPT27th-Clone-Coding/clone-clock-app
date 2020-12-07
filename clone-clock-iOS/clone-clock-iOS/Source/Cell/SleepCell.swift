@@ -37,6 +37,6 @@ extension SleepCell {
         changeButton.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.15).isActive = true
         
         // (bug) sroll 하니까 좀 변함
-        changeButton.layer.cornerRadius = changeButton.frame.size.width * 0.3
+        changeButton.layer.cornerRadius = changeButton.bounds.size.width * 0.3
     }
 }

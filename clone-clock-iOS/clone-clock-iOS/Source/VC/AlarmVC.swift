@@ -35,36 +35,35 @@ class AlarmVC: UIViewController {
 
 extension AlarmVC {
     func setView() {
+        view.backgroundColor = .black
         alarmTableView.backgroundColor = .black
         alarmTableView.separatorColor = .darkGray
-        alarmTableView.separatorStyle = .singleLine
         alarmTableView.tableFooterView = UILabel(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 0))
         alarmTableView.tableFooterView?.backgroundColor = .clear
         
         let plusButton = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: nil)
         plusButton.tintColor = .systemOrange
         
-        navigationController?.navigationBar.backgroundColor = .black
         navigationItem.leftBarButtonItem = editButtonItem
         editButtonItem.tintColor = .systemOrange
         editButtonItem.title = "편집"
         navigationItem.rightBarButtonItem = plusButton
         
         // navigation bar
-        self.navigationController?.navigationBar.setItems([navigationItem], animated: true)
-        self.navigationController?.navigationBar.topItem?.title = .none
-        self.navigationController?.navigationBar.tintColor = .black
         self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor : UIColor.white]
-        
+        self.navigationController?.navigationBar.barStyle = .black
+        self.navigationController?.navigationBar.setItems([navigationItem], animated: true)
+
         // large title
-        self.navigationItem.largeTitleDisplayMode = .automatic
+        // bug: 화면 첫 시작에서 안 보임..
+        self.navigationItem.largeTitleDisplayMode = .always
         self.navigationController?.navigationBar.prefersLargeTitles = true
-        self.navigationController?.navigationBar.largeContentTitle = "알람"
-        self.navigationItem.hidesSearchBarWhenScrolling = true
+        self.navigationItem.title = "알람"
+        self.navigationItem.hidesSearchBarWhenScrolling = false
         
         self.navigationController?.navigationBar.largeTitleTextAttributes = [
             NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 35),
-            NSAttributedString.Key.foregroundColor : UIColor.brown
+            NSAttributedString.Key.foregroundColor : UIColor.white
         ]
     }
     
@@ -113,29 +112,11 @@ extension AlarmVC : UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-        view.tintColor = .black
-        
-        var header : UITableViewHeaderFooterView = view as! UITableViewHeaderFooterView
+        let header : UITableViewHeaderFooterView = view as! UITableViewHeaderFooterView
         header.textLabel?.textColor = .white
-    }
-    
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-
-        let sectionHeaderHeight = self.alarmTableView.sectionHeaderHeight;
-        if (scrollView.contentOffset.y <= sectionHeaderHeight && scrollView.contentOffset.y>=0) {
-            scrollView.contentInset = UIEdgeInsets(top: -scrollView.contentOffset.y, left: 0, bottom: 0, right: 0);
-        } else if (scrollView.contentOffset.y>=sectionHeaderHeight) {
-            scrollView.contentInset = UIEdgeInsets(top: -sectionHeaderHeight, left: 0, bottom: 0, right: 0);
-        }
+        header.textLabel?.font = .boldSystemFont(ofSize: 15)
     }
 }
 
 extension AlarmVC: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
-        if (indexPath.section == 0) {
-            return nil
-        }
-        
-        return indexPath
-    }
 }

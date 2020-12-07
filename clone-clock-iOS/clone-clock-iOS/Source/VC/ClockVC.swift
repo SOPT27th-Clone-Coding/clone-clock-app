@@ -54,6 +54,7 @@ extension ClockVC {
         navigationItem.rightBarButtonItem = plusButton
         
         // navigation bar
+        self.navigationController?.navigationBar.barStyle = .black
         self.navigationController?.navigationBar.setItems([navigationItem], animated: true)
         self.navigationController?.navigationBar.topItem?.title = .none
         self.navigationController?.navigationBar.tintColor = .black

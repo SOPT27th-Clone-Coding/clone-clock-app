@@ -16,19 +16,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wM2-P8-hMv">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="wM2-P8-hMv">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SleepCell" rowHeight="162" id="WfQ-DY-whw" customClass="SleepCell" customModule="clone_clock_iOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="162"/>
+                                        <rect key="frame" x="0.0" y="55.5" width="414" height="162"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WfQ-DY-whw" id="wg8-sC-eFp">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="162"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="알람 없음" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TEj-kI-tQc">
-                                                    <rect key="frame" x="30" y="20" width="151" height="122"/>
+                                                    <rect key="frame" x="20" y="10" width="151" height="142"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="41"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -39,10 +39,10 @@
                                                 </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="TEj-kI-tQc" firstAttribute="top" secondItem="wg8-sC-eFp" secondAttribute="top" constant="20" id="4z5-7P-zfb"/>
-                                                <constraint firstAttribute="bottom" secondItem="TEj-kI-tQc" secondAttribute="bottom" constant="20" id="OaD-c6-KFo"/>
+                                                <constraint firstItem="TEj-kI-tQc" firstAttribute="top" secondItem="wg8-sC-eFp" secondAttribute="top" constant="10" id="4z5-7P-zfb"/>
+                                                <constraint firstAttribute="bottom" secondItem="TEj-kI-tQc" secondAttribute="bottom" constant="10" id="OaD-c6-KFo"/>
                                                 <constraint firstAttribute="trailing" secondItem="UW7-4p-9Bf" secondAttribute="trailing" constant="20" id="fDg-aS-bkC"/>
-                                                <constraint firstItem="TEj-kI-tQc" firstAttribute="leading" secondItem="wg8-sC-eFp" secondAttribute="leading" constant="30" id="pTD-KQ-H3t"/>
+                                                <constraint firstItem="TEj-kI-tQc" firstAttribute="leading" secondItem="wg8-sC-eFp" secondAttribute="leading" constant="20" id="pTD-KQ-H3t"/>
                                                 <constraint firstItem="UW7-4p-9Bf" firstAttribute="centerY" secondItem="TEj-kI-tQc" secondAttribute="centerY" id="pdJ-Dh-LvX"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -55,7 +55,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AlarmCell" rowHeight="106" id="Dsa-bF-DrL" customClass="AlarmCell" customModule="clone_clock_iOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="190" width="414" height="106"/>
+                                        <rect key="frame" x="0.0" y="217.5" width="414" height="106"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Dsa-bF-DrL" id="0hV-R8-a8l">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="106"/>
