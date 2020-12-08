@@ -44,7 +44,7 @@ class ClockCell: UITableViewCell {
 }
 
 extension ClockCell {
-    func setCell(clock: ClockData) {
+    func setCell(clock: ClockModel) {
         timeLabel.text = clock.time
         meridiemLabel.text = clock.meridiem
         cityLabel.text = clock.city

@@ -7,13 +7,19 @@
 
 import UIKit
 
+protocol SendDataDelegate {
+    func sendData(clock: ClockModel)
+}
+
 class AddCityVC: UIViewController {
     @IBOutlet weak var cityTableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     
-    var clockList : [ClockData] = []
-    var fileteredList: [ClockData] = []
-    var clockIndex : [String:[ClockData]] = [:]
+    var delegate: SendDataDelegate?
+    
+    var clockList : [ClockModel] = []
+    var fileteredList: [ClockModel] = []
+    var clockIndex : [String:[ClockModel]] = [:]
     var clockSection: [String] = []
     var searchController = UISearchController()
     var resultVC = UITableViewController()
@@ -46,17 +52,7 @@ extension AddCityVC {
     }
     
     func setData() {
-        clockList.append(contentsOf: [ClockData(time: "7:33", city: "서울", diff: "오늘, +0시간", meridiem: "오후", section: "ㅅ"), ClockData(time: "5:30", city: "갈라파고스 제도", diff: "오늘, -15시간", meridiem: "오전", section: "ㄱ"),ClockData(time: "7:33", city: "데이비스 기지", diff: "오늘, +0시간", meridiem: "오후", section: "ㄷ"),ClockData(time: "7:33", city: "서울", diff: "오늘, +0시간", meridiem: "오후", section: "ㅅ")
-                                      ,ClockData(time: "7:33", city: "서울", diff: "오늘, +0시간", meridiem: "오후", section: "ㅅ")
-                                      ,ClockData(time: "7:33", city: "서울", diff: "오늘, +0시간", meridiem: "오후", section: "ㅅ")
-                                      ,ClockData(time: "7:33", city: "서울", diff: "오늘, +0시간", meridiem: "오후", section: "ㅅ")
-                                      ,ClockData(time: "7:33", city: "서울", diff: "오늘, +0시간", meridiem: "오후", section: "ㅅ")
-                                      ,ClockData(time: "7:33", city: "서울", diff: "오늘, +0시간", meridiem: "오후", section: "ㅅ")
-                                      ,ClockData(time: "7:33", city: "서울", diff: "오늘, +0시간", meridiem: "오후", section: "ㅅ")
-                                      ,ClockData(time: "7:33", city: "서울", diff: "오늘, +0시간", meridiem: "오후", section: "ㅅ")
-                                      ,ClockData(time: "7:33", city: "서울", diff: "오늘, +0시간", meridiem: "오후", section: "ㅅ")
-                                      ,ClockData(time: "7:33", city: "서울", diff: "오늘, +0시간", meridiem: "오후", section: "ㅅ")
-                                      
+        clockList.append(contentsOf: [ClockModel(time: "7:33", city: "서울", diff: "오늘, +0시간", meridiem: "오후", section: "ㅅ"), ClockModel(time: "5:30", city: "갈라파고스 제도", diff: "오늘, -15시간", meridiem: "오전", section: "ㄱ"),ClockModel(time: "7:33", city: "데이비스 기지", diff: "오늘, +0시간", meridiem: "오후", section: "ㄷ"),ClockModel(time: "7:33", city: "서울", diff: "오늘, +0시간", meridiem: "오후", section: "ㅅ")
         ])
         
         for clock in clockList {
@@ -77,7 +73,7 @@ extension AddCityVC {
 // 나중에 searchBar랑 controller 연결하기
 extension AddCityVC: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
-        fileteredList = clockList.filter({ (clockData: ClockData) -> Bool in
+        fileteredList = clockList.filter({ (clockData: ClockModel) -> Bool in
             return clockData.city.contains(searchController.searchBar.text!)
         })
         
@@ -127,12 +123,7 @@ extension AddCityVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let value = clockIndex[clockSection[indexPath.section]]?[indexPath.row] else {return}
         
-        guard let pvc = self.presentingViewController as? UITabBarController else {return}
-        pvc.selectedIndex = 0
-        
-        // 여기서 clockVC가 왜 안 나오나요...
-//        guard let clockVC = pvc.selectedViewController as? UINavigationController else {return}
-        
+        delegate?.sendData(clock: value)
         self.dismiss(animated: true, completion: nil)
     }
 }

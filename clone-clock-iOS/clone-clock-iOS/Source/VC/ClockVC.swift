@@ -10,13 +10,13 @@ import UIKit
 class ClockVC: UIViewController {
     @IBOutlet weak var clockTableView: UITableView!
     
-    var clockList : [ClockData] = []
+    var clockList : [ClockModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setView()
         
-        clockList.append(contentsOf: [ClockData(time: "7:33", city: "서울", diff: "오늘, +0시간", meridiem: "오후"), ClockData(time: "5:30", city: "갈라파고스 제도", diff: "오늘, -15시간", meridiem: "오전"),ClockData(time: "7:33", city: "데이비스 기지", diff: "오늘, +0시간", meridiem: "오후"),ClockData(time: "7:33", city: "서울", diff: "오늘, +0시간", meridiem: "오후")])
+        clockList.append(contentsOf: [ClockModel(time: "7:33", city: "서울", diff: "오늘, +0시간", meridiem: "오후")])
         
         clockTableView.dataSource = self
         clockTableView.delegate = self
@@ -30,11 +30,6 @@ class ClockVC: UIViewController {
             clockTableView.setEditing(false, animated: true)
             editButtonItem.title = "편집"
         }
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        print(self)
-        print("나타납니다")
     }
 }
 
@@ -100,6 +95,7 @@ extension ClockVC {
     
     @IBAction func touchUpPlus(_ sender: UIButton) {
         guard let addVC = self.storyboard?.instantiateViewController(withIdentifier: "AddCityVC") as? AddCityVC else {return}
+        addVC.delegate = self
         
         self.present(addVC, animated: true, completion: nil)
     }
@@ -143,5 +139,12 @@ extension ClockVC: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
         
+    }
+}
+
+extension ClockVC: SendDataDelegate {
+    func sendData(clock: ClockModel) {
+        clockList.append(clock)
+        clockTableView.reloadData()
     }
 }

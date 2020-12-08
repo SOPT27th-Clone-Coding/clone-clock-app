@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ClockData {
+struct ClockModel {
     var time: String
     var city: String
     var diff: String
