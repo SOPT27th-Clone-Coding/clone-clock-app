@@ -138,7 +138,10 @@ extension ClockVC: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        let moveClock = clockList[sourceIndexPath.row]
         
+        clockList.remove(at: sourceIndexPath.row)
+        clockList.insert(moveClock, at: destinationIndexPath.row)
     }
 }
 
