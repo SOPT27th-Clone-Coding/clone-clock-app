@@ -152,6 +152,55 @@
             </objects>
             <point key="canvasLocation" x="1237.68115942029" y="87.723214285714278"/>
         </scene>
+        <!--Add AlarmVC-->
+        <scene sceneID="sk6-CV-Of1">
+            <objects>
+                <viewController storyboardIdentifier="AddAlarmVC" id="WEO-Fs-nML" customClass="AddAlarmVC" customModule="clone_clock_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="K0f-zn-4ac">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2Ob-VE-ldc">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="112" id="dFD-kI-gyj">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="112"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dFD-kI-gyj" id="oOq-Pz-xvN">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="112"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Fq3-V8-DxU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Fq3-V8-DxU" firstAttribute="bottom" secondItem="2Ob-VE-ldc" secondAttribute="bottom" id="X1O-AT-gTg"/>
+                            <constraint firstItem="Fq3-V8-DxU" firstAttribute="trailing" secondItem="2Ob-VE-ldc" secondAttribute="trailing" id="ZGW-jW-QCI"/>
+                            <constraint firstItem="2Ob-VE-ldc" firstAttribute="top" secondItem="Fq3-V8-DxU" secondAttribute="top" id="bOw-ub-7YM"/>
+                            <constraint firstItem="2Ob-VE-ldc" firstAttribute="leading" secondItem="Fq3-V8-DxU" secondAttribute="leading" id="rp5-zG-UwM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="USu-FU-ght">
+                        <barButtonItem key="leftBarButtonItem" title="취소" id="Vfe-c1-wYe">
+                            <connections>
+                                <action selector="touchUpCancel:" destination="WEO-Fs-nML" id="hu7-c8-Qzs"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="저장" id="dfD-qy-cje"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="cancelBarButton" destination="Vfe-c1-wYe" id="lWp-X6-aGN"/>
+                        <outlet property="saveBarButton" destination="dfD-qy-cje" id="lLU-Kf-OiM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1N1-cy-mnI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1237.68115942029" y="839.73214285714278"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="79T-7h-Old">
             <objects>
@@ -169,6 +218,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xeV-te-4g4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="327.536231884058" y="87.723214285714278"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="MPJ-nz-lEa">
+            <objects>
+                <navigationController storyboardIdentifier="AddAlarmNVC" automaticallyAdjustsScrollViewInsets="NO" id="LLA-9e-ibm" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JR5-SV-mfV">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="WEO-Fs-nML" kind="relationship" relationship="rootViewController" id="GLs-xY-hj8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GeH-99-vB2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="328" y="840"/>
         </scene>
     </scenes>
     <resources>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB10D9C125811EA1001FAF90 /* AddAlarmVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB10D9C025811EA1001FAF90 /* AddAlarmVC.swift */; };
 		AB74293A2573E4F000A7317D /* AddCityVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7429392573E4F000A7317D /* AddCityVC.swift */; };
 		ABA4627D257013610081DD0B /* ClockCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA4627C257013610081DD0B /* ClockCell.swift */; };
 		ABA4628125726A2E0081DD0B /* ClockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA4628025726A2E0081DD0B /* ClockModel.swift */; };
@@ -30,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AB10D9C025811EA1001FAF90 /* AddAlarmVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAlarmVC.swift; sourceTree = "<group>"; };
 		AB7429392573E4F000A7317D /* AddCityVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCityVC.swift; sourceTree = "<group>"; };
 		ABA4627C257013610081DD0B /* ClockCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockCell.swift; sourceTree = "<group>"; };
 		ABA4628025726A2E0081DD0B /* ClockModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockModel.swift; sourceTree = "<group>"; };
@@ -65,6 +67,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AB10D9BB25811E31001FAF90 /* Clock */ = {
+			isa = PBXGroup;
+			children = (
+				ABFE4943256D5CBC0052F538 /* ClockVC.swift */,
+				AB7429392573E4F000A7317D /* AddCityVC.swift */,
+			);
+			path = Clock;
+			sourceTree = "<group>";
+		};
+		AB10D9BC25811E38001FAF90 /* Alarm */ = {
+			isa = PBXGroup;
+			children = (
+				ABFE494F256D6B0D0052F538 /* AlarmVC.swift */,
+				AB10D9C025811EA1001FAF90 /* AddAlarmVC.swift */,
+			);
+			path = Alarm;
+			sourceTree = "<group>";
+		};
+		AB10D9BE25811E60001FAF90 /* StopWatch */ = {
+			isa = PBXGroup;
+			children = (
+				ABFE4952256D6B1B0052F538 /* StopWatchVC.swift */,
+			);
+			path = StopWatch;
+			sourceTree = "<group>";
+		};
+		AB10D9BF25811E6E001FAF90 /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				ABFE4955256D6B260052F538 /* TimerVC.swift */,
+			);
+			path = Timer;
+			sourceTree = "<group>";
+		};
 		ABA4627F25726A180081DD0B /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -137,12 +173,11 @@
 		ABFE4937256D59E20052F538 /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				AB10D9BF25811E6E001FAF90 /* Timer */,
+				AB10D9BE25811E60001FAF90 /* StopWatch */,
+				AB10D9BC25811E38001FAF90 /* Alarm */,
+				AB10D9BB25811E31001FAF90 /* Clock */,
 				ABFE4939256D5BD50052F538 /* tabBarController.swift */,
-				ABFE4943256D5CBC0052F538 /* ClockVC.swift */,
-				ABFE494F256D6B0D0052F538 /* AlarmVC.swift */,
-				ABFE4952256D6B1B0052F538 /* StopWatchVC.swift */,
-				ABFE4955256D6B260052F538 /* TimerVC.swift */,
-				AB7429392573E4F000A7317D /* AddCityVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -237,6 +272,7 @@
 				ABFE491F256D57DA0052F538 /* AppDelegate.swift in Sources */,
 				ABFE4944256D5CBC0052F538 /* ClockVC.swift in Sources */,
 				AB74293A2573E4F000A7317D /* AddCityVC.swift in Sources */,
+				AB10D9C125811EA1001FAF90 /* AddAlarmVC.swift in Sources */,
 				ABFE493A256D5BD50052F538 /* tabBarController.swift in Sources */,
 				ABFE4950256D6B0D0052F538 /* AlarmVC.swift in Sources */,
 				ABA4627D257013610081DD0B /* ClockCell.swift in Sources */,

@@ -31,6 +31,12 @@ class AlarmVC: UIViewController {
             editButtonItem.title = "편집"
         }
     }
+    
+    @IBAction func touchUpPlus(_ sender: UIBarButtonItem) {
+        guard let addAlarmVC = self.storyboard?.instantiateViewController(identifier: "AddAlarmNVC") as? UINavigationController else {return}
+
+        self.present(addAlarmVC, animated: true, completion: nil)
+    }
 }
 
 extension AlarmVC {
@@ -41,7 +47,7 @@ extension AlarmVC {
         alarmTableView.tableFooterView = UILabel(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 0))
         alarmTableView.tableFooterView?.backgroundColor = .clear
         
-        let plusButton = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: nil)
+        let plusButton = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: #selector(touchUpPlus(_:)))
         plusButton.tintColor = .systemOrange
         
         navigationItem.leftBarButtonItem = editButtonItem
