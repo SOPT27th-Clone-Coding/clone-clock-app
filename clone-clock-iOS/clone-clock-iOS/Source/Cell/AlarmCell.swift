@@ -28,27 +28,40 @@ class AlarmCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    @IBAction func toggleSwitch(_ sender: UISwitch) {
+        if (sender.isOn) {
+            setColor(color: .white)
+        } else {
+            setColor(color: .gray)
+        }
+    }
+}
+
+extension AlarmCell {
     func setCell(alarm: AlarmModel) {
         var color: UIColor = .white
-        if (alarm.status) {
+        if (!alarm.status) {
             color = .gray
         }
 
         backgroundColor = .black
-        hourLabel.textColor = color
-        minLabel.textColor = color
-        meridiemLabel.textColor = color
-        colonLabel.textColor = color
-        alarmLabel.textColor = color
+        setColor(color: color)
         
         hourLabel.text = "\(alarm.hour)"
         minLabel.text = "\(alarm.min)"
         meridiemLabel.text = "\(alarm.meridiem)"
         statusSwitch.isOn = alarm.status
         
-        
         meridiemLabel.sizeToFit()
         minLabel.sizeToFit()
         hourLabel.sizeToFit()
+    }
+    
+    func setColor(color: UIColor) {
+        hourLabel.textColor = color
+        minLabel.textColor = color
+        meridiemLabel.textColor = color
+        colonLabel.textColor = color
+        alarmLabel.textColor = color
     }
 }
