@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		AB10D9C125811EA1001FAF90 /* AddAlarmVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB10D9C025811EA1001FAF90 /* AddAlarmVC.swift */; };
 		AB74293A2573E4F000A7317D /* AddCityVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7429392573E4F000A7317D /* AddCityVC.swift */; };
+		AB9D3ED425825161008B6491 /* RepeatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9D3ED325825161008B6491 /* RepeatCell.swift */; };
+		AB9D3EEA25827EFA008B6491 /* RemindCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9D3EE925827EFA008B6491 /* RemindCell.swift */; };
 		ABA4627D257013610081DD0B /* ClockCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA4627C257013610081DD0B /* ClockCell.swift */; };
 		ABA4628125726A2E0081DD0B /* ClockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA4628025726A2E0081DD0B /* ClockModel.swift */; };
 		ABE75DC5257BF0FA00245480 /* AlarmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE75DC4257BF0FA00245480 /* AlarmModel.swift */; };
@@ -33,6 +35,8 @@
 /* Begin PBXFileReference section */
 		AB10D9C025811EA1001FAF90 /* AddAlarmVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAlarmVC.swift; sourceTree = "<group>"; };
 		AB7429392573E4F000A7317D /* AddCityVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCityVC.swift; sourceTree = "<group>"; };
+		AB9D3ED325825161008B6491 /* RepeatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatCell.swift; sourceTree = "<group>"; };
+		AB9D3EE925827EFA008B6491 /* RemindCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindCell.swift; sourceTree = "<group>"; };
 		ABA4627C257013610081DD0B /* ClockCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockCell.swift; sourceTree = "<group>"; };
 		ABA4628025726A2E0081DD0B /* ClockModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockModel.swift; sourceTree = "<group>"; };
 		ABE75DC4257BF0FA00245480 /* AlarmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmModel.swift; sourceTree = "<group>"; };
@@ -99,6 +103,25 @@
 				ABFE4955256D6B260052F538 /* TimerVC.swift */,
 			);
 			path = Timer;
+			sourceTree = "<group>";
+		};
+		AB9D3EE225827C6A008B6491 /* Alarm */ = {
+			isa = PBXGroup;
+			children = (
+				AB9D3ED325825161008B6491 /* RepeatCell.swift */,
+				ABE75DC7257BF16200245480 /* AlarmCell.swift */,
+				ABE75DCA257BF35400245480 /* SleepCell.swift */,
+				AB9D3EE925827EFA008B6491 /* RemindCell.swift */,
+			);
+			path = Alarm;
+			sourceTree = "<group>";
+		};
+		AB9D3EE325827C72008B6491 /* Clock */ = {
+			isa = PBXGroup;
+			children = (
+				ABA4627C257013610081DD0B /* ClockCell.swift */,
+			);
+			path = Clock;
 			sourceTree = "<group>";
 		};
 		ABA4627F25726A180081DD0B /* Model */ = {
@@ -185,9 +208,8 @@
 		ABFE4938256D59E80052F538 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				ABA4627C257013610081DD0B /* ClockCell.swift */,
-				ABE75DC7257BF16200245480 /* AlarmCell.swift */,
-				ABE75DCA257BF35400245480 /* SleepCell.swift */,
+				AB9D3EE325827C72008B6491 /* Clock */,
+				AB9D3EE225827C6A008B6491 /* Alarm */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -270,6 +292,7 @@
 				ABA4628125726A2E0081DD0B /* ClockModel.swift in Sources */,
 				ABFE4953256D6B1B0052F538 /* StopWatchVC.swift in Sources */,
 				ABFE491F256D57DA0052F538 /* AppDelegate.swift in Sources */,
+				AB9D3ED425825161008B6491 /* RepeatCell.swift in Sources */,
 				ABFE4944256D5CBC0052F538 /* ClockVC.swift in Sources */,
 				AB74293A2573E4F000A7317D /* AddCityVC.swift in Sources */,
 				AB10D9C125811EA1001FAF90 /* AddAlarmVC.swift in Sources */,
@@ -279,6 +302,7 @@
 				ABFE4921256D57DA0052F538 /* SceneDelegate.swift in Sources */,
 				ABE75DC5257BF0FA00245480 /* AlarmModel.swift in Sources */,
 				ABE75DC8257BF16200245480 /* AlarmCell.swift in Sources */,
+				AB9D3EEA25827EFA008B6491 /* RemindCell.swift in Sources */,
 				ABE75DCB257BF35400245480 /* SleepCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
