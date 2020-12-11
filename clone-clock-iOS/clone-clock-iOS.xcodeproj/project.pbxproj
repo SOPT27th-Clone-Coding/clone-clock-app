@@ -8,9 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		AB10D9C125811EA1001FAF90 /* AddAlarmVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB10D9C025811EA1001FAF90 /* AddAlarmVC.swift */; };
+		AB56D9F72583ACEB007CB5E5 /* LabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB56D9F62583ACEB007CB5E5 /* LabelCell.swift */; };
+		AB56D9FA2583ACF6007CB5E5 /* SoundCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB56D9F92583ACF6007CB5E5 /* SoundCell.swift */; };
+		AB56D9FD2583B0D7007CB5E5 /* SoundVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB56D9FC2583B0D7007CB5E5 /* SoundVC.swift */; };
+		AB56DA002583B0EB007CB5E5 /* LabelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB56D9FF2583B0EB007CB5E5 /* LabelVC.swift */; };
 		AB74293A2573E4F000A7317D /* AddCityVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7429392573E4F000A7317D /* AddCityVC.swift */; };
 		AB9D3ED425825161008B6491 /* RepeatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9D3ED325825161008B6491 /* RepeatCell.swift */; };
 		AB9D3EEA25827EFA008B6491 /* RemindCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9D3EE925827EFA008B6491 /* RemindCell.swift */; };
+		AB9D3EEF258399B0008B6491 /* RepeatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9D3EEE258399B0008B6491 /* RepeatVC.swift */; };
 		ABA4627D257013610081DD0B /* ClockCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA4627C257013610081DD0B /* ClockCell.swift */; };
 		ABA4628125726A2E0081DD0B /* ClockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA4628025726A2E0081DD0B /* ClockModel.swift */; };
 		ABE75DC5257BF0FA00245480 /* AlarmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE75DC4257BF0FA00245480 /* AlarmModel.swift */; };
@@ -34,9 +39,14 @@
 
 /* Begin PBXFileReference section */
 		AB10D9C025811EA1001FAF90 /* AddAlarmVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAlarmVC.swift; sourceTree = "<group>"; };
+		AB56D9F62583ACEB007CB5E5 /* LabelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelCell.swift; sourceTree = "<group>"; };
+		AB56D9F92583ACF6007CB5E5 /* SoundCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundCell.swift; sourceTree = "<group>"; };
+		AB56D9FC2583B0D7007CB5E5 /* SoundVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundVC.swift; sourceTree = "<group>"; };
+		AB56D9FF2583B0EB007CB5E5 /* LabelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelVC.swift; sourceTree = "<group>"; };
 		AB7429392573E4F000A7317D /* AddCityVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCityVC.swift; sourceTree = "<group>"; };
 		AB9D3ED325825161008B6491 /* RepeatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatCell.swift; sourceTree = "<group>"; };
 		AB9D3EE925827EFA008B6491 /* RemindCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindCell.swift; sourceTree = "<group>"; };
+		AB9D3EEE258399B0008B6491 /* RepeatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatVC.swift; sourceTree = "<group>"; };
 		ABA4627C257013610081DD0B /* ClockCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockCell.swift; sourceTree = "<group>"; };
 		ABA4628025726A2E0081DD0B /* ClockModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockModel.swift; sourceTree = "<group>"; };
 		ABE75DC4257BF0FA00245480 /* AlarmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmModel.swift; sourceTree = "<group>"; };
@@ -85,6 +95,9 @@
 			children = (
 				ABFE494F256D6B0D0052F538 /* AlarmVC.swift */,
 				AB10D9C025811EA1001FAF90 /* AddAlarmVC.swift */,
+				AB9D3EEE258399B0008B6491 /* RepeatVC.swift */,
+				AB56D9FC2583B0D7007CB5E5 /* SoundVC.swift */,
+				AB56D9FF2583B0EB007CB5E5 /* LabelVC.swift */,
 			);
 			path = Alarm;
 			sourceTree = "<group>";
@@ -112,6 +125,8 @@
 				ABE75DC7257BF16200245480 /* AlarmCell.swift */,
 				ABE75DCA257BF35400245480 /* SleepCell.swift */,
 				AB9D3EE925827EFA008B6491 /* RemindCell.swift */,
+				AB56D9F62583ACEB007CB5E5 /* LabelCell.swift */,
+				AB56D9F92583ACF6007CB5E5 /* SoundCell.swift */,
 			);
 			path = Alarm;
 			sourceTree = "<group>";
@@ -293,16 +308,21 @@
 				ABFE4953256D6B1B0052F538 /* StopWatchVC.swift in Sources */,
 				ABFE491F256D57DA0052F538 /* AppDelegate.swift in Sources */,
 				AB9D3ED425825161008B6491 /* RepeatCell.swift in Sources */,
+				AB56DA002583B0EB007CB5E5 /* LabelVC.swift in Sources */,
 				ABFE4944256D5CBC0052F538 /* ClockVC.swift in Sources */,
 				AB74293A2573E4F000A7317D /* AddCityVC.swift in Sources */,
 				AB10D9C125811EA1001FAF90 /* AddAlarmVC.swift in Sources */,
 				ABFE493A256D5BD50052F538 /* tabBarController.swift in Sources */,
 				ABFE4950256D6B0D0052F538 /* AlarmVC.swift in Sources */,
 				ABA4627D257013610081DD0B /* ClockCell.swift in Sources */,
+				AB56D9FA2583ACF6007CB5E5 /* SoundCell.swift in Sources */,
 				ABFE4921256D57DA0052F538 /* SceneDelegate.swift in Sources */,
+				AB9D3EEF258399B0008B6491 /* RepeatVC.swift in Sources */,
 				ABE75DC5257BF0FA00245480 /* AlarmModel.swift in Sources */,
 				ABE75DC8257BF16200245480 /* AlarmCell.swift in Sources */,
 				AB9D3EEA25827EFA008B6491 /* RemindCell.swift in Sources */,
+				AB56D9F72583ACEB007CB5E5 /* LabelCell.swift in Sources */,
+				AB56D9FD2583B0D7007CB5E5 /* SoundVC.swift in Sources */,
 				ABE75DCB257BF35400245480 /* SleepCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

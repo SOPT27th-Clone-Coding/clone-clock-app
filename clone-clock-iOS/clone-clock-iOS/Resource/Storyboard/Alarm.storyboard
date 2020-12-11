@@ -152,6 +152,22 @@
             </objects>
             <point key="canvasLocation" x="1237.68115942029" y="87.723214285714278"/>
         </scene>
+        <!--RepeatVC-->
+        <scene sceneID="mkI-fD-BqN">
+            <objects>
+                <viewController storyboardIdentifier="RepeatVC" id="Y8l-MS-aaW" customClass="RepeatVC" customModule="clone_clock_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RX2-bN-dwR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Rjq-nx-4pJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="XFf-s3-037"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nib-a9-R1B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2548" y="187"/>
+        </scene>
         <!--Add AlarmVC-->
         <scene sceneID="sk6-CV-Of1">
             <objects>
@@ -236,10 +252,106 @@
                                         <connections>
                                             <outlet property="cellInfoLabel" destination="hWo-cb-uJL" id="BE4-lY-6nX"/>
                                             <outlet property="cellTitleLabel" destination="gRK-EL-bHI" id="sEx-d3-nBx"/>
+                                            <segue destination="Y8l-MS-aaW" kind="show" id="1RY-Pw-V7U"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LabelCell" rowHeight="62" id="pcF-QF-lFh" customClass="LabelCell" customModule="clone_clock_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="226" width="414" height="62"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pcF-QF-lFh" id="Yfn-L8-iVf">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="62"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="레이블" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q6a-lh-TZ8">
+                                                    <rect key="frame" x="10" y="10" width="44.5" height="42"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="SEq-Oj-scU"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jeS-sI-48d">
+                                                    <rect key="frame" x="381" y="20.5" width="13" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <state key="normal" image="chevron.right" catalog="system"/>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="알람" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6YQ-rz-4Tt">
+                                                    <rect key="frame" x="346.5" y="20.5" width="29.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.1764705882" green="0.1764705882" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="jeS-sI-48d" secondAttribute="trailing" constant="20" id="CQj-DK-HDF"/>
+                                                <constraint firstItem="jeS-sI-48d" firstAttribute="centerY" secondItem="Q6a-lh-TZ8" secondAttribute="centerY" id="KKA-pN-BJM"/>
+                                                <constraint firstItem="jeS-sI-48d" firstAttribute="leading" secondItem="6YQ-rz-4Tt" secondAttribute="trailing" constant="5" id="Uck-ZM-wdf"/>
+                                                <constraint firstItem="Q6a-lh-TZ8" firstAttribute="leading" secondItem="Yfn-L8-iVf" secondAttribute="leading" constant="10" id="Y7P-4B-0y0"/>
+                                                <constraint firstItem="Q6a-lh-TZ8" firstAttribute="top" secondItem="Yfn-L8-iVf" secondAttribute="top" constant="10" id="g46-R7-98y"/>
+                                                <constraint firstAttribute="bottom" secondItem="Q6a-lh-TZ8" secondAttribute="bottom" constant="10" id="tdR-eX-IQr"/>
+                                                <constraint firstItem="6YQ-rz-4Tt" firstAttribute="centerY" secondItem="Q6a-lh-TZ8" secondAttribute="centerY" id="vEh-9S-M7E"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <constraints>
+                                            <constraint firstItem="Q6a-lh-TZ8" firstAttribute="centerY" secondItem="pcF-QF-lFh" secondAttribute="centerY" id="TSh-Zp-AYy"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="cellInfoLabel" destination="6YQ-rz-4Tt" id="69L-UQ-qgH"/>
+                                            <segue destination="PN5-gx-z9i" kind="show" id="Fcb-Cj-kjh"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SoundCell" rowHeight="62" id="SEc-ka-2aJ" customClass="SoundCell" customModule="clone_clock_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="288" width="414" height="62"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SEc-ka-2aJ" id="AjX-ta-7yN">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="62"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="사운드" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bLd-xQ-As5">
+                                                    <rect key="frame" x="10" y="10" width="44.5" height="42"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="xMY-Tu-x7L"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NGO-Od-iPQ">
+                                                    <rect key="frame" x="381" y="20.5" width="13" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <state key="normal" image="chevron.right" catalog="system"/>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="없음" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LoQ-4c-24R">
+                                                    <rect key="frame" x="346.5" y="20.5" width="29.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.1764705882" green="0.1764705882" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <constraints>
+                                                <constraint firstItem="bLd-xQ-As5" firstAttribute="leading" secondItem="AjX-ta-7yN" secondAttribute="leading" constant="10" id="1u1-N1-EiF"/>
+                                                <constraint firstAttribute="bottom" secondItem="bLd-xQ-As5" secondAttribute="bottom" constant="10" id="By4-de-61d"/>
+                                                <constraint firstItem="NGO-Od-iPQ" firstAttribute="centerY" secondItem="bLd-xQ-As5" secondAttribute="centerY" id="Caq-g5-P6P"/>
+                                                <constraint firstItem="NGO-Od-iPQ" firstAttribute="leading" secondItem="LoQ-4c-24R" secondAttribute="trailing" constant="5" id="G8s-Rj-Inz"/>
+                                                <constraint firstAttribute="trailing" secondItem="NGO-Od-iPQ" secondAttribute="trailing" constant="20" id="PY6-nh-ccJ"/>
+                                                <constraint firstItem="LoQ-4c-24R" firstAttribute="centerY" secondItem="bLd-xQ-As5" secondAttribute="centerY" id="wlf-XW-a7i"/>
+                                                <constraint firstItem="bLd-xQ-As5" firstAttribute="top" secondItem="AjX-ta-7yN" secondAttribute="top" constant="10" id="y9u-yl-DxF"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <constraints>
+                                            <constraint firstItem="bLd-xQ-As5" firstAttribute="centerY" secondItem="SEc-ka-2aJ" secondAttribute="centerY" id="67d-qJ-K14"/>
+                                        </constraints>
+                                        <connections>
+                                            <segue destination="JsH-SI-o2m" kind="show" id="EoO-a0-pA4"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RemindCell" rowHeight="62" id="g4U-ho-vr0" customClass="RemindCell" customModule="clone_clock_iOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="226" width="414" height="62"/>
+                                        <rect key="frame" x="0.0" y="350" width="414" height="62"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="g4U-ho-vr0" id="tiZ-OM-xWh">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="62"/>
@@ -304,6 +416,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1N1-cy-mnI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1237.68115942029" y="839.73214285714278"/>
+        </scene>
+        <!--LabelVC-->
+        <scene sceneID="6ae-AC-6uy">
+            <objects>
+                <viewController storyboardIdentifier="LabelVC" id="PN5-gx-z9i" customClass="LabelVC" customModule="clone_clock_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FiK-dl-qZk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="dwb-1Z-Q0w"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="EcF-Ka-BIR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZtO-Ub-n8L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2548" y="913"/>
+        </scene>
+        <!--SoundVC-->
+        <scene sceneID="ZCr-nR-9SL">
+            <objects>
+                <viewController storyboardIdentifier="SoundVC" id="JsH-SI-o2m" customClass="SoundVC" customModule="clone_clock_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Np3-vF-hAC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="yhC-FT-GGW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="SeU-No-ajn"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eyM-dp-3Z4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2548" y="1670"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="79T-7h-Old">

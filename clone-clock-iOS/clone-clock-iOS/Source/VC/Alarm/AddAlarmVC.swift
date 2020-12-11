@@ -26,6 +26,12 @@ class AddAlarmVC: UIViewController {
     @IBAction func touchUpCancel(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let indexPath = addAlarmTableView.indexPathForSelectedRow?.row else {return}
+        
+        print(indexPath)
+    }
 }
 
 extension AddAlarmVC {
@@ -62,21 +68,24 @@ extension AddAlarmVC: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.row {
-        case 0,1,2:
-            guard let cell = addAlarmTableView.dequeueReusableCell(withIdentifier: "RepeatCell") as? RepeatCell else { return UITableViewCell()
-            }
+        case 0:
+            guard let cell = addAlarmTableView.dequeueReusableCell(withIdentifier: "RepeatCell") as? RepeatCell else { return UITableViewCell()}
             
-            cell.setCell(cellTitle[indexPath.row], cellInfo[indexPath.row])
+            return cell
+        case 1:
+            guard let cell = addAlarmTableView.dequeueReusableCell(withIdentifier: "LabelCell") as? LabelCell else {return UITableViewCell()}
+            
+            return cell
+        case 2:
+            guard let cell = addAlarmTableView.dequeueReusableCell(withIdentifier: "SoundCell") as? SoundCell else {return UITableViewCell()}
+            
             return cell
         case 3:
             guard let cell = addAlarmTableView.dequeueReusableCell(withIdentifier: "RemindCell") as? RemindCell else { return UITableViewCell() }
-            
-            cell.setCell(cellTitle[indexPath.row], cellInfo[indexPath.row])
+
             return cell
         default:
             return UITableViewCell()
         }
     }
-    
-    
 }
