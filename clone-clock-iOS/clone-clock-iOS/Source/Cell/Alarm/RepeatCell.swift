@@ -9,8 +9,7 @@ import UIKit
 
 class RepeatCell: UITableViewCell {
     static let identifier = "RepeatCell"
-    
-    @IBOutlet weak var cellTitleLabel: UILabel!
+        
     @IBOutlet weak var cellInfoLabel: UILabel!
     
     override func awakeFromNib() {
@@ -27,10 +26,8 @@ class RepeatCell: UITableViewCell {
 }
 
 extension RepeatCell {
-    func setCell(_ title: String, _ info: Any) {
-        cellTitleLabel.text = title
-        cellTitleLabel.textColor = .white
-        
-        cellInfoLabel.text = "\(info)"
+    func setCell(info: String) {
+        cellInfoLabel.text = info
+        cellInfoLabel.sizeToFit()
     }
 }

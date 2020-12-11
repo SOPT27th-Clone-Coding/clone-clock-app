@@ -7,10 +7,15 @@
 
 import UIKit
 
+protocol sendRepeatData {
+    func sendRepeatData(repeatData: String)
+}
+
 class RepeatVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var weeksData : [(date: String, selected: Bool)] = [("월", false), ("화", false), ("수", false), ("목", false), ("금", false), ("토", false), ("일", false)]
+    var delegate: sendRepeatData?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +23,17 @@ class RepeatVC: UIViewController {
         
         tableView.dataSource = self
         tableView.delegate = self
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        var weekStr: String = ""
+        for week in weeksData {
+            if (week.selected) {
+                weekStr.append(week.date + " ")
+            }
+        }
+        
+        delegate?.sendRepeatData(repeatData: weekStr)
     }
 }
 

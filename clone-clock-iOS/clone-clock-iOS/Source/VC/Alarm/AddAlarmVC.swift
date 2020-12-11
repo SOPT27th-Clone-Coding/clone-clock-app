@@ -14,6 +14,7 @@ class AddAlarmVC: UIViewController {
     
     var cellTitle : [String] = []
     var cellInfo: [String] = []
+    var repeatLabel: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,9 +29,10 @@ class AddAlarmVC: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let indexPath = addAlarmTableView.indexPathForSelectedRow?.row else {return}
+        if let repeatVC = segue.destination as? RepeatVC {
+            repeatVC.delegate = self
+        }
         
-        print(indexPath)
     }
 }
 
@@ -70,6 +72,7 @@ extension AddAlarmVC: UITableViewDataSource {
         switch indexPath.row {
         case 0:
             guard let cell = addAlarmTableView.dequeueReusableCell(withIdentifier: "RepeatCell") as? RepeatCell else { return UITableViewCell()}
+            cell.setCell(info: repeatLabel ?? "안 함")
             
             return cell
         case 1:
@@ -87,5 +90,12 @@ extension AddAlarmVC: UITableViewDataSource {
         default:
             return UITableViewCell()
         }
+    }
+}
+
+extension AddAlarmVC: sendRepeatData {
+    func sendRepeatData(repeatData: String) {
+        repeatLabel = repeatData
+        addAlarmTableView.reloadData()
     }
 }

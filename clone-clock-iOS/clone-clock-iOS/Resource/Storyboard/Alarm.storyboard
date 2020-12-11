@@ -265,8 +265,7 @@
                                             <constraint firstItem="gRK-EL-bHI" firstAttribute="centerY" secondItem="dFD-kI-gyj" secondAttribute="centerY" id="Ex0-6s-zhC"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="cellInfoLabel" destination="hWo-cb-uJL" id="BE4-lY-6nX"/>
-                                            <outlet property="cellTitleLabel" destination="gRK-EL-bHI" id="sEx-d3-nBx"/>
+                                            <outlet property="cellInfoLabel" destination="hWo-cb-uJL" id="6RD-aQ-FRm"/>
                                             <segue destination="Y8l-MS-aaW" kind="show" id="1RY-Pw-V7U"/>
                                         </connections>
                                     </tableViewCell>
