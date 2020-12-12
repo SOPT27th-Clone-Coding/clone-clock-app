@@ -33,9 +33,12 @@ class AlarmVC: UIViewController {
     }
     
     @IBAction func touchUpPlus(_ sender: UIBarButtonItem) {
-        guard let addAlarmVC = self.storyboard?.instantiateViewController(identifier: "AddAlarmNVC") as? UINavigationController else {return}
+        guard let addAlarmNVC = self.storyboard?.instantiateViewController(identifier: "AddAlarmNVC") as? UINavigationController else {return}
+//        guard let addAlarmVC = self.storyboard?.instantiateViewController(identifier: "AddAlarmVC") as? AddAlarmVC else {return}
+//
+//        addAlarmVC.alarmDelegate = self
 
-        self.present(addAlarmVC, animated: true, completion: nil)
+        self.present(addAlarmNVC, animated: true, completion: nil)
     }
 }
 
@@ -142,5 +145,13 @@ extension AlarmVC: UITableViewDelegate {
         }
         
         return true
+    }
+}
+
+
+extension AlarmVC: sendAlarmDelegate {
+    func sendAlarmData(alarm: AlarmModel) {
+        print(alarmData)
+        print(alarm)
     }
 }

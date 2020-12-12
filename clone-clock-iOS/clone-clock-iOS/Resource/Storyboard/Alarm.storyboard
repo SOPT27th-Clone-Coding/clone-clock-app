@@ -419,7 +419,11 @@
                                 <action selector="touchUpCancel:" destination="WEO-Fs-nML" id="hu7-c8-Qzs"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="저장" id="dfD-qy-cje"/>
+                        <barButtonItem key="rightBarButtonItem" title="저장" id="dfD-qy-cje">
+                            <connections>
+                                <action selector="touchUpSave:" destination="WEO-Fs-nML" id="Cel-14-8dq"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="addAlarmTableView" destination="2Ob-VE-ldc" id="lxz-of-bWU"/>

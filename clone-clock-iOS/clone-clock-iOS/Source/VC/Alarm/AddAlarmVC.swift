@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol sendAlarmDelegate {
+    func sendAlarmData(alarm: AlarmModel)
+}
+
 class AddAlarmVC: UIViewController {
     @IBOutlet weak var timePicker: UIDatePicker!
     @IBOutlet weak var addAlarmTableView: UITableView!
@@ -15,6 +19,8 @@ class AddAlarmVC: UIViewController {
     var cellTitle : [String] = []
     var cellInfo: [String] = []
     var repeatLabel: String?
+    
+    var alarmDelegate: sendAlarmDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +31,21 @@ class AddAlarmVC: UIViewController {
     }
     
     @IBAction func touchUpCancel(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    // refact!! : 구조 변경하면서 위임을 AlarmVC에서 해야할 것 같음
+    @IBAction func touchUpSave(_ sender: Any) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeStyle = .short
+        
+        let date = dateFormatter.string(from: timePicker.date)
+        print(date)
+        guard let vc = self.storyboard?.instantiateViewController(identifier: "AlarmVC") as? AlarmVC else {return}
+        alarmDelegate = vc
+        
+        alarmDelegate?.sendAlarmData(alarm: AlarmModel(meridiem: "dhdnd", hour: 3, min: 23, status: true))
+        
         self.dismiss(animated: true, completion: nil)
     }
     
