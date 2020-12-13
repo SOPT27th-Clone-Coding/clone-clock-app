@@ -12,6 +12,7 @@
 		AB56D9FA2583ACF6007CB5E5 /* SoundCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB56D9F92583ACF6007CB5E5 /* SoundCell.swift */; };
 		AB56D9FD2583B0D7007CB5E5 /* SoundVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB56D9FC2583B0D7007CB5E5 /* SoundVC.swift */; };
 		AB56DA002583B0EB007CB5E5 /* LabelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB56D9FF2583B0EB007CB5E5 /* LabelVC.swift */; };
+		AB644877258611C1007E6DDB /* LabCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB644876258611C1007E6DDB /* LabCell.swift */; };
 		AB74293A2573E4F000A7317D /* AddCityVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7429392573E4F000A7317D /* AddCityVC.swift */; };
 		AB9D3ED425825161008B6491 /* RepeatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9D3ED325825161008B6491 /* RepeatCell.swift */; };
 		AB9D3EEA25827EFA008B6491 /* RemindCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9D3EE925827EFA008B6491 /* RemindCell.swift */; };
@@ -43,6 +44,7 @@
 		AB56D9F92583ACF6007CB5E5 /* SoundCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundCell.swift; sourceTree = "<group>"; };
 		AB56D9FC2583B0D7007CB5E5 /* SoundVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundVC.swift; sourceTree = "<group>"; };
 		AB56D9FF2583B0EB007CB5E5 /* LabelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelVC.swift; sourceTree = "<group>"; };
+		AB644876258611C1007E6DDB /* LabCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabCell.swift; sourceTree = "<group>"; };
 		AB7429392573E4F000A7317D /* AddCityVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCityVC.swift; sourceTree = "<group>"; };
 		AB9D3ED325825161008B6491 /* RepeatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatCell.swift; sourceTree = "<group>"; };
 		AB9D3EE925827EFA008B6491 /* RemindCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindCell.swift; sourceTree = "<group>"; };
@@ -116,6 +118,14 @@
 				ABFE4955256D6B260052F538 /* TimerVC.swift */,
 			);
 			path = Timer;
+			sourceTree = "<group>";
+		};
+		AB6448702586117C007E6DDB /* StopWatch */ = {
+			isa = PBXGroup;
+			children = (
+				AB644876258611C1007E6DDB /* LabCell.swift */,
+			);
+			path = StopWatch;
 			sourceTree = "<group>";
 		};
 		AB9D3EE225827C6A008B6491 /* Alarm */ = {
@@ -223,6 +233,7 @@
 		ABFE4938256D59E80052F538 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				AB6448702586117C007E6DDB /* StopWatch */,
 				AB9D3EE325827C72008B6491 /* Clock */,
 				AB9D3EE225827C6A008B6491 /* Alarm */,
 			);
@@ -312,6 +323,7 @@
 				ABFE4944256D5CBC0052F538 /* ClockVC.swift in Sources */,
 				AB74293A2573E4F000A7317D /* AddCityVC.swift in Sources */,
 				AB10D9C125811EA1001FAF90 /* AddAlarmVC.swift in Sources */,
+				AB644877258611C1007E6DDB /* LabCell.swift in Sources */,
 				ABFE493A256D5BD50052F538 /* tabBarController.swift in Sources */,
 				ABFE4950256D6B0D0052F538 /* AlarmVC.swift in Sources */,
 				ABA4627D257013610081DD0B /* ClockCell.swift in Sources */,
