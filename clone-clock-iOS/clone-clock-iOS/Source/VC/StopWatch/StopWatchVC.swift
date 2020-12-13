@@ -16,7 +16,7 @@ class StopWatchVC: UIViewController {
     var leftButtonIsActive: Bool = false
     var rightButtonIsActive: Bool = false
     
-    let interval = 0.1
+    let interval = 0.01
     var count = 0
     var timer: Timer?
     
@@ -118,6 +118,9 @@ extension StopWatchVC {
         
         timerTableView.backgroundColor = .black
         timerLabel.text = timerTimeFormat(time: 0)
+        timerLabel.numberOfLines = 1
+        timerLabel.adjustsFontSizeToFitWidth = true
+        timerLabel.minimumScaleFactor = 0.5
         timerLabel.sizeToFit()
     }
     
@@ -127,15 +130,15 @@ extension StopWatchVC {
     }
     
     func timerTimeFormat(time: Int) -> String{
-        let hour = time / 3600
-        let min = (time % 3600) / 60
-        let sec = (time % 3600) % 60
+        let min = time / 3600
+        let sec = (time % 3600) / 60
+        let centiSec = (time % 3600) % 100
         
-        let hourStr =  hour < 10 ? "0\(hour)" : String(hour)
         let minStr = min < 10 ? "0\(min)" : String(min)
         let secStr = sec < 10 ? "0\(sec)" : String(sec)
+        let centiStr = centiSec < 10 ? "0\(centiSec)" : String(centiSec)
         
-        return "\(hourStr):\(minStr):\(secStr)"
+        return "\(minStr):\(secStr).\(centiStr)"
     }
     
     func addTimerData() {
