@@ -38,7 +38,6 @@ class StopWatchVC: UIViewController {
             timerLabel.text = timerTimeFormat(time: 0)
             
             setLabButton()
-            leftButtonIsActive = true
             timerData.removeAll()
             timerTableView.reloadSections(IndexSet(0...0), with: UITableView.RowAnimation.automatic)
         }
