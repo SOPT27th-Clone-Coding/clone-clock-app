@@ -23,6 +23,7 @@
 		ABE75DC5257BF0FA00245480 /* AlarmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE75DC4257BF0FA00245480 /* AlarmModel.swift */; };
 		ABE75DC8257BF16200245480 /* AlarmCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE75DC7257BF16200245480 /* AlarmCell.swift */; };
 		ABE75DCB257BF35400245480 /* SleepCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE75DCA257BF35400245480 /* SleepCell.swift */; };
+		ABF431AE258E451000F4DE9B /* AddSoundVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF431AD258E451000F4DE9B /* AddSoundVC.swift */; };
 		ABFE491F256D57DA0052F538 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFE491E256D57DA0052F538 /* AppDelegate.swift */; };
 		ABFE4921256D57DA0052F538 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFE4920256D57DA0052F538 /* SceneDelegate.swift */; };
 		ABFE4928256D57DC0052F538 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABFE4927256D57DC0052F538 /* Assets.xcassets */; };
@@ -56,6 +57,7 @@
 		ABE75DC4257BF0FA00245480 /* AlarmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmModel.swift; sourceTree = "<group>"; };
 		ABE75DC7257BF16200245480 /* AlarmCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmCell.swift; sourceTree = "<group>"; };
 		ABE75DCA257BF35400245480 /* SleepCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepCell.swift; sourceTree = "<group>"; };
+		ABF431AD258E451000F4DE9B /* AddSoundVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSoundVC.swift; sourceTree = "<group>"; };
 		ABFE491B256D57DA0052F538 /* clone-clock-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "clone-clock-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABFE491E256D57DA0052F538 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABFE4920256D57DA0052F538 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				ABFE4955256D6B260052F538 /* TimerVC.swift */,
+				ABF431AD258E451000F4DE9B /* AddSoundVC.swift */,
 			);
 			path = Timer;
 			sourceTree = "<group>";
@@ -331,6 +334,7 @@
 				ABFE491F256D57DA0052F538 /* AppDelegate.swift in Sources */,
 				AB9D3ED425825161008B6491 /* RepeatCell.swift in Sources */,
 				AB56DA002583B0EB007CB5E5 /* LabelVC.swift in Sources */,
+				ABF431AE258E451000F4DE9B /* AddSoundVC.swift in Sources */,
 				ABFE4944256D5CBC0052F538 /* ClockVC.swift in Sources */,
 				AB74293A2573E4F000A7317D /* AddCityVC.swift in Sources */,
 				AB10D9C125811EA1001FAF90 /* AddAlarmVC.swift in Sources */,

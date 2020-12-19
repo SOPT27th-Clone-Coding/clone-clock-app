@@ -91,6 +91,7 @@
                                         </constraints>
                                         <connections>
                                             <outlet property="soundLabel" destination="hLC-VI-Sc3" id="onE-Ub-xw4"/>
+                                            <segue destination="WlR-QI-BTV" kind="show" id="k4D-II-4Eg"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -118,6 +119,57 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tca-h0-PZ7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="371" y="108"/>
+        </scene>
+        <!--Add SoundVC-->
+        <scene sceneID="lHv-RB-d4H">
+            <objects>
+                <viewController storyboardIdentifier="AddSoundVC" id="WlR-QI-BTV" customClass="AddSoundVC" customModule="clone_clock_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FWd-Fe-UDn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wgX-fA-BIh">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                                <items>
+                                    <navigationItem title="Title" id="32M-IM-6xK"/>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3pg-f3-7Zj">
+                                <rect key="frame" x="0.0" y="56" width="414" height="752"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="RD1-De-ayM">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RD1-De-ayM" id="vMX-1j-Wpt">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qQ9-Wg-iK2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3pg-f3-7Zj" firstAttribute="leading" secondItem="qQ9-Wg-iK2" secondAttribute="leading" id="1xz-YV-epW"/>
+                            <constraint firstItem="qQ9-Wg-iK2" firstAttribute="trailing" secondItem="3pg-f3-7Zj" secondAttribute="trailing" id="AfS-xa-wtR"/>
+                            <constraint firstItem="wgX-fA-BIh" firstAttribute="leading" secondItem="qQ9-Wg-iK2" secondAttribute="leading" id="UPu-Tt-ovl"/>
+                            <constraint firstItem="wgX-fA-BIh" firstAttribute="top" secondItem="qQ9-Wg-iK2" secondAttribute="top" id="eia-Rn-cYe"/>
+                            <constraint firstItem="3pg-f3-7Zj" firstAttribute="top" secondItem="wgX-fA-BIh" secondAttribute="bottom" id="rKL-PV-ScN"/>
+                            <constraint firstItem="qQ9-Wg-iK2" firstAttribute="bottom" secondItem="3pg-f3-7Zj" secondAttribute="bottom" id="wXf-5M-UHT"/>
+                            <constraint firstAttribute="trailing" secondItem="wgX-fA-BIh" secondAttribute="trailing" id="yzB-zQ-uFC"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="m8h-Wi-kQb"/>
+                    <connections>
+                        <outlet property="navigationBar" destination="wgX-fA-BIh" id="Wqd-EW-r0e"/>
+                        <outlet property="soundTableView" destination="3pg-f3-7Zj" id="Dyv-Ui-lYK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tbW-b1-9b5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1225" y="108"/>
         </scene>
     </scenes>
     <resources>
