@@ -131,7 +131,14 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wgX-fA-BIh">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                                 <items>
-                                    <navigationItem title="Title" id="32M-IM-6xK"/>
+                                    <navigationItem title="Title" id="32M-IM-6xK">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" id="YcG-CL-ZUd">
+                                            <connections>
+                                                <action selector="touchUpCancel:" destination="WlR-QI-BTV" id="6hN-kw-PFm"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Item" id="i61-gG-IIX"/>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3pg-f3-7Zj">
@@ -163,7 +170,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="m8h-Wi-kQb"/>
                     <connections>
+                        <outlet property="cancelButton" destination="YcG-CL-ZUd" id="Ywd-sj-RZp"/>
                         <outlet property="navigationBar" destination="wgX-fA-BIh" id="Wqd-EW-r0e"/>
+                        <outlet property="settingButton" destination="i61-gG-IIX" id="OJA-Gi-CUZ"/>
                         <outlet property="soundTableView" destination="3pg-f3-7Zj" id="Dyv-Ui-lYK"/>
                     </connections>
                 </viewController>
