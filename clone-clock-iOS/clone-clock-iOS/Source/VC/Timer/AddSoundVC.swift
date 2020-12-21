@@ -23,7 +23,7 @@ extension AddSoundVC {
         view.backgroundColor = .black
         
         //navigation bar
-        self.navigationBar.barStyle = .black
+//        self.navigationBar.barStyle = .blackTranslucent
         self.navigationBar.topItem?.title = "타이머 종료 시"
     }
 }

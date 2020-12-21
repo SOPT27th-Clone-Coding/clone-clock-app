@@ -36,7 +36,8 @@ extension tabBarController {
         TimerVC.tabBarItem.image = UIImage(systemName: "timer")
         TimerVC.tabBarItem.title = "타이머"
         
-        self.tabBar.barStyle = .black
+//        self.tabBar.barStyle = .black
+        self.tabBar.barTintColor = .black
         self.tabBar.tintColor = .systemOrange
         
         setViewControllers([clockVC, alarmVC, stopWatchVC, TimerVC], animated: true)
