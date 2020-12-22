@@ -118,7 +118,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tca-h0-PZ7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="371" y="108"/>
+            <point key="canvasLocation" x="369.56521739130437" y="107.8125"/>
         </scene>
         <!--Add SoundVC-->
         <scene sceneID="lHv-RB-d4H">
@@ -137,7 +137,11 @@
                                                 <action selector="touchUpCancel:" destination="WlR-QI-BTV" id="6hN-kw-PFm"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Item" id="i61-gG-IIX"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Item" id="i61-gG-IIX">
+                                            <connections>
+                                                <action selector="touchUpSetting:" destination="WlR-QI-BTV" id="5aa-5E-QUS"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>

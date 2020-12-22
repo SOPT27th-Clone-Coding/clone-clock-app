@@ -23,8 +23,8 @@ class TimerSoundCell: UITableViewCell {
 }
 
 extension TimerSoundCell {
-    func setCell() {
-        soundLabel.text = "전파 감지기"
+    func setCell(name: String) {
+        soundLabel.text = name
         soundLabel.textColor = .systemGray
         
         self.backgroundColor = #colorLiteral(red: 0.3028068841, green: 0.3010125458, blue: 0.304189831, alpha: 0.3198576627)

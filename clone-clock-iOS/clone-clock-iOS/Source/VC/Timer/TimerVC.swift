@@ -13,12 +13,20 @@ class TimerVC: UIViewController {
     @IBOutlet weak var rightButton: UIButton!
     @IBOutlet weak var soundTableView: UITableView!
     
+    var soundName: String = "전파 탐지기"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setView()
         
         soundTableView.dataSource = self
         soundTableView.delegate = self
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let addSoundVC = segue.destination as? AddSoundVC {
+            addSoundVC.delegate = self
+        }
     }
 }
 
@@ -59,7 +67,7 @@ extension TimerVC: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "TimerSoundCell") as? TimerSoundCell else { return UITableViewCell() }
-        cell.setCell()
+        cell.setCell(name: soundName)
         cell.selectionStyle = .none
         
         return cell
@@ -72,3 +80,11 @@ extension TimerVC: UITableViewDelegate {
     }
 }
 
+extension TimerVC: TimerSoundDataDelegate {
+    func sendSoundData(name: String) {
+        soundName = name
+        
+        let indexPath = IndexPath(row: 0, section: 0)
+        soundTableView.reloadRows(at: [indexPath], with: .fade)
+    }
+}
