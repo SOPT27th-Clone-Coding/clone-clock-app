@@ -141,17 +141,42 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3pg-f3-7Zj">
-                                <rect key="frame" x="0.0" y="56" width="414" height="752"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3pg-f3-7Zj">
+                                <rect key="frame" x="0.0" y="66" width="414" height="742"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="RD1-De-ayM">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TimerSoundOptionCell" rowHeight="76" id="RD1-De-ayM" customClass="TimerSoundOptionCell" customModule="clone_clock_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="76"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RD1-De-ayM" id="vMX-1j-Wpt">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="76"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0qM-wc-Q1C">
+                                                    <rect key="frame" x="5" y="10" width="15" height="56"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="15" id="E2t-0x-6iL"/>
+                                                        <constraint firstAttribute="height" constant="15" id="USt-cX-7oi"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RKh-q9-PcZ">
+                                                    <rect key="frame" x="30" y="27.5" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="RKh-q9-PcZ" firstAttribute="leading" secondItem="0qM-wc-Q1C" secondAttribute="trailing" constant="10" id="2Yx-rx-Vq0"/>
+                                                <constraint firstItem="0qM-wc-Q1C" firstAttribute="top" secondItem="vMX-1j-Wpt" secondAttribute="top" constant="10" id="bUs-jb-ehC"/>
+                                                <constraint firstItem="RKh-q9-PcZ" firstAttribute="centerY" secondItem="0qM-wc-Q1C" secondAttribute="centerY" id="bzu-l2-iKZ"/>
+                                                <constraint firstItem="0qM-wc-Q1C" firstAttribute="leading" secondItem="vMX-1j-Wpt" secondAttribute="leading" constant="5" id="dlW-Af-Uvy"/>
+                                                <constraint firstAttribute="bottom" secondItem="0qM-wc-Q1C" secondAttribute="bottom" constant="10" id="vMj-Dt-STD"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="checkMarkImage" destination="0qM-wc-Q1C" id="yve-xL-mNX"/>
+                                            <outlet property="soundName" destination="RKh-q9-PcZ" id="XIc-mX-gNF"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -163,7 +188,7 @@
                             <constraint firstItem="qQ9-Wg-iK2" firstAttribute="trailing" secondItem="3pg-f3-7Zj" secondAttribute="trailing" id="AfS-xa-wtR"/>
                             <constraint firstItem="wgX-fA-BIh" firstAttribute="leading" secondItem="qQ9-Wg-iK2" secondAttribute="leading" id="UPu-Tt-ovl"/>
                             <constraint firstItem="wgX-fA-BIh" firstAttribute="top" secondItem="qQ9-Wg-iK2" secondAttribute="top" id="eia-Rn-cYe"/>
-                            <constraint firstItem="3pg-f3-7Zj" firstAttribute="top" secondItem="wgX-fA-BIh" secondAttribute="bottom" id="rKL-PV-ScN"/>
+                            <constraint firstItem="3pg-f3-7Zj" firstAttribute="top" secondItem="wgX-fA-BIh" secondAttribute="bottom" constant="10" id="rKL-PV-ScN"/>
                             <constraint firstItem="qQ9-Wg-iK2" firstAttribute="bottom" secondItem="3pg-f3-7Zj" secondAttribute="bottom" id="wXf-5M-UHT"/>
                             <constraint firstAttribute="trailing" secondItem="wgX-fA-BIh" secondAttribute="trailing" id="yzB-zQ-uFC"/>
                         </constraints>
@@ -178,7 +203,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tbW-b1-9b5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1225" y="108"/>
+            <point key="canvasLocation" x="1224.6376811594205" y="107.8125"/>
         </scene>
     </scenes>
     <resources>

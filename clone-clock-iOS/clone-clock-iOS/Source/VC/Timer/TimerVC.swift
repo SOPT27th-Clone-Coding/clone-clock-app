@@ -60,6 +60,7 @@ extension TimerVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "TimerSoundCell") as? TimerSoundCell else { return UITableViewCell() }
         cell.setCell()
+        cell.selectionStyle = .none
         
         return cell
     }

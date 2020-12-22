@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB0894D225923CDB005EE2EB /* TimerSoundOptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0894D125923CDB005EE2EB /* TimerSoundOptionCell.swift */; };
 		AB10D9C125811EA1001FAF90 /* AddAlarmVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB10D9C025811EA1001FAF90 /* AddAlarmVC.swift */; };
 		AB56D9F72583ACEB007CB5E5 /* LabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB56D9F62583ACEB007CB5E5 /* LabelCell.swift */; };
 		AB56D9FA2583ACF6007CB5E5 /* SoundCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB56D9F92583ACF6007CB5E5 /* SoundCell.swift */; };
@@ -41,6 +42,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AB0894D125923CDB005EE2EB /* TimerSoundOptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerSoundOptionCell.swift; sourceTree = "<group>"; };
 		AB10D9C025811EA1001FAF90 /* AddAlarmVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAlarmVC.swift; sourceTree = "<group>"; };
 		AB56D9F62583ACEB007CB5E5 /* LabelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelCell.swift; sourceTree = "<group>"; };
 		AB56D9F92583ACF6007CB5E5 /* SoundCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundCell.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				ABAED023258BAB11002AACCB /* TimerSoundCell.swift */,
+				AB0894D125923CDB005EE2EB /* TimerSoundOptionCell.swift */,
 			);
 			path = Timer;
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 				AB56DA002583B0EB007CB5E5 /* LabelVC.swift in Sources */,
 				ABF431AE258E451000F4DE9B /* AddSoundVC.swift in Sources */,
 				ABFE4944256D5CBC0052F538 /* ClockVC.swift in Sources */,
+				AB0894D225923CDB005EE2EB /* TimerSoundOptionCell.swift in Sources */,
 				AB74293A2573E4F000A7317D /* AddCityVC.swift in Sources */,
 				AB10D9C125811EA1001FAF90 /* AddAlarmVC.swift in Sources */,
 				AB644877258611C1007E6DDB /* LabCell.swift in Sources */,
